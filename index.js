@@ -18,6 +18,15 @@ Do the following:
    HINT: no function required
 */
 
+const votingAge = 18;
+
+if (votingAge >=18) {
+  console.log("True");
+} else if (votingAge <18){
+  console.log(false)
+}
+
+
 
 
 /*
@@ -30,6 +39,13 @@ Do the following:
 
    HINT: no function required
 */
+
+var value1 = 1;
+var value2 =2; 
+
+if (value2 === 2) {
+  console.log(value1 = 3);
+}
 
 
 
@@ -45,6 +61,12 @@ Do the following:
 
    HINT: look up the Number method
 */
+
+var stringtype = "1999";
+
+parseFloat(stringtype);
+
+console.log(stringtype);
 
 
 
