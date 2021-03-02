@@ -252,9 +252,28 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+function annoyingSong(start){
+  var bottles;
+  for (counter = 20; counter >= 1; counter = counter - 1) 
+  {
+      if (counter == 1) {
+          bottles = 'bottle';
+      } else {
+          bottles = 'bottles';
+      }
+      console.log(counter+" "+bottles+" of soda on the wall.");
+      if (counter < 20) {
+          console.log("");
+          console.log(counter+" "+bottles+" of soda on the wall.");
+      }
+      console.log(counter+" "+bottles+" of soda.");
+      console.log("Take one down.");
+      console.log("Pass it around.");
+      if (counter == 1) {
+          console.log("No bottles of soda on the wall.");
+      } 
+  } 
+  } annoyingSong(20);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -272,9 +291,29 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(scoreval){
+  let score; 
+  if (score = 90 -100){
+    let comment = 'you got an A'
+    return comment;
   }
+  if (score = 80 -89){
+    let comment = 'you got an B'
+    return comment;
+  }
+  if (score = 70-79){
+    let comment = 'you got an C'
+    return comment;
+  }
+  if (score = 60-69){
+    let comment = 'you got an D'
+    return comment;
+  }
+  if (score = 0-59){
+    let comment = 'you got an F'
+    return comment;
+  }
+} grade(90);
   
   
 
