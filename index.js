@@ -40,7 +40,6 @@ Do the following:
    HINT: no function required
 */
 
-var value1 = 1;
 var value2 =2; 
 
 if (value2 === 2) {
@@ -169,7 +168,7 @@ function game(user, computer){
     computer = Math.random();
     if (computer <.56){
       computer = "paper";
-    } else if (computer =>.86){
+    } else if (() =>.86){
       computer = "rock";
     } else {
       computer = "scissors";
@@ -218,10 +217,12 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kiloval){
+    let miles = kiloval / 1.609
+    return miles;
   }
-
+  
+  miles (2);
 
 
 //Task 5b - Feet to CM
@@ -232,9 +233,12 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
+function feet(cmval){
+  let feet = cmval * 2
+  return feet;
+}
+
+feet (30.48);
  
 
 
@@ -287,9 +291,6 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
-}
 
 
 
