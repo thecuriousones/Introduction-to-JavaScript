@@ -80,9 +80,12 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a,b){
+    const sum = a * b
+    return sum;
   }
+
+  multiply(2,3);
 
 
 
@@ -96,9 +99,12 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+  let sum = age * 2
+  return sum;
 }
+
+dogYears(7);
 
 
 
@@ -129,9 +135,12 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
-  }
+function hungryDog(weight, age) {
+  if (weight = 15 && age >= 1);
+     return weight;
+}
+
+ hungryDog(15,1);
 
 
 
@@ -157,7 +166,43 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-    /*add your code here*/
+    computer = Math.random();
+    if (computer <.56){
+      computer = "paper";
+    } else if (computer =>.86){
+      computer = "rock";
+    } else {
+      computer = "scissors";
+    }
+    user = rock, paper, scissors;
+    if (user === paper){
+      user = paper;
+    } else if (user === rock){
+      user = rock;
+    }else (user === scissors){
+      user = scissors;
+    }
+    if (user === computer){
+      return "It's a tie!";
+    }
+    if (user === rock && computer === scissors){
+      return "You win!"
+    }
+    if (user === scissors && computer === paper){
+      return "You win!";
+    }
+    if (user === paper && computer === rock){
+      return "You win!";
+    }
+    if (user === scissors && computer === rock){
+      return "You lose!"
+    }
+    if (user === paper && computer === scissors){
+      return "You lose!";
+    }
+    if (user === rock && computer === paper){
+      return "You lose!";
+    }
 }
   
   
