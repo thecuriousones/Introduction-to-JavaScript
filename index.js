@@ -135,11 +135,26 @@ Use the hungryDog function and feeding requirements below to do the following:
 */  
 
 function hungryDog(weight, age) {
-  if (weight = 15 && age >= 1);
-     return weight;
+  if (age < 1) {
+    if (age > 7/12) {
+      return weight * .04
+    } else if (age > 4/12) {
+      return weight * .05
+    } else {
+      return weight * .1
+    }
+  } else if (age >= 1) {
+    if (weight <=5) {
+      return weight * .05
+    } else if (weight <=10) {
+      return weight * .04
+    } else if (weight <=15) {
+      return weight * .03
+    } else {
+      return weight * 0.2
+    }
 }
-
- hungryDog(15,1);
+}
 
 
 
@@ -164,45 +179,34 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-    computer = Math.random();
-    if (computer <.56){
-      computer = "paper";
-    } else if (() =>.86){
-      computer = "rock";
-    } else {
-      computer = "scissors";
-    }
-    user = rock, paper, scissors;
-    if (user === paper){
-      user = paper;
-    } else if (user === rock){
-      user = rock;
-    }else (user === scissors){
-      user = scissors;
-    }
-    if (user === computer){
-      return "It's a tie!";
-    }
-    if (user === rock && computer === scissors){
-      return "You win!"
-    }
-    if (user === scissors && computer === paper){
-      return "You win!";
-    }
-    if (user === paper && computer === rock){
-      return "You win!";
-    }
-    if (user === scissors && computer === rock){
-      return "You lose!"
-    }
-    if (user === paper && computer === scissors){
-      return "You lose!";
-    }
-    if (user === rock && computer === paper){
-      return "You lose!";
-    }
+let computerValue = Math.floor(Math.random() * 3);
+if (computerValue < 1) {
+  computerValue = 'scissors'
+} else if (computerValue < 2) {
+  computerValue = 'rock'
+} else {
+  computerValue = 'paper'
 }
+console.log('computer picked:', computerValue)
+
+function game(user, computer){
+  if (user === computer){
+    return "It's a tie!";
+  } else if (user === 'rock' && computer === 'scissors'){
+    return "You win!"
+  } else if (user === 'scissors' && computer === 'paper'){
+    return "You win!";
+  } else if (user === 'paper' && computer === 'rock'){
+    return "You win!";
+  } else if (user === 'scissors' && computer === 'rock'){
+    return "You lose!"
+  } else if (user === 'paper' && computer === 'scissors'){
+    return "You lose!";
+  } else if (user === 'rock' && computer === 'paper'){
+    return "You lose!";
+  }
+}
+game('rock', computerValue)
   
   
 
@@ -218,8 +222,7 @@ Using the miles function below do the following:
 */
 
 function miles(kiloval){
-    let miles = kiloval / 1.609
-    return miles;
+    return miles /1.609;
   }
   
   miles (2);
@@ -234,8 +237,7 @@ Using the feet function below do the following:
 */
 
 function feet(cmval){
-  let feet = cmval * 2
-  return feet;
+  return feet * 2;
 }
 
 feet (30.48);
@@ -253,27 +255,12 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(start){
-  var bottles;
-  for (counter = 20; counter >= 1; counter = counter - 1) 
-  {
-      if (counter == 1) {
-          bottles = 'bottle';
-      } else {
-          bottles = 'bottles';
-      }
-      console.log(counter+" "+bottles+" of soda on the wall.");
-      if (counter < 20) {
-          console.log("");
-          console.log(counter+" "+bottles+" of soda on the wall.");
-      }
-      console.log(counter+" "+bottles+" of soda.");
-      console.log("Take one down.");
-      console.log("Pass it around.");
-      if (counter == 1) {
-          console.log("No bottles of soda on the wall.");
-      } 
+  for (let i = start; i >= 1; i--) {
+    console.log(`${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`)
   } 
-  } annoyingSong(20);
+}
+  
+annoyingSong(20);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -291,29 +278,21 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(scoreval){
-  let score; 
-  if (score = 90 -100){
-    let comment = 'you got an A'
-    return comment;
+function grade(score){
+  if (score >= 90){
+    return 'you got an A'
+  } else if (score >= 80){
+    return 'you got an B'
+  } else if (score >= 70){
+    return 'you got a C'
+  } else if (score >= 60){
+    return 'you got an D'
+  } else if (score >= 0){
+    return 'you got an F'
   }
-  if (score = 80 -89){
-    let comment = 'you got an B'
-    return comment;
-  }
-  if (score = 70-79){
-    let comment = 'you got an C'
-    return comment;
-  }
-  if (score = 60-69){
-    let comment = 'you got an D'
-    return comment;
-  }
-  if (score = 0-59){
-    let comment = 'you got an F'
-    return comment;
-  }
-} grade(90);
+} 
+
+grade(85);
   
   
 
